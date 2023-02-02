@@ -1,5 +1,5 @@
 import { createContext, useContext } from 'react';
-import { products } from '../mock/products';
+import useCart from '../hooks/useProductsReducer';
 
 const productContext = createContext(null);
 
@@ -8,7 +8,8 @@ export const useProductContext = () => {
 };
 
 const ProductProvider = ({ children }) => {
-  return <productContext.Provider value={products}>{children}</productContext.Provider>;
+  const cart = useCart();
+  return <productContext.Provider value={cart}>{children}</productContext.Provider>;
 };
 
 export default ProductProvider;

@@ -1,8 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useProductContext } from '../contexts/productContext';
 import { PATHS } from '../router';
 
 const Header = () => {
+  const { state } = useProductContext();
+
   return (
     <header>
       <ul>
@@ -10,7 +13,7 @@ const Header = () => {
           <NavLink to={PATHS.HOME}>Home</NavLink>
         </li>
         <li>
-          <NavLink to={PATHS.CART}>Cart</NavLink>
+          <NavLink to={PATHS.CART}>Cart {state.count}</NavLink>
         </li>
       </ul>
     </header>

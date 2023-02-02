@@ -7,3 +7,9 @@
 .active {
   color: red;
 }
+
+ul,
+ol,
+li {
+  list-style: none;
+}
