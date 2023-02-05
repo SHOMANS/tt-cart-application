@@ -1,4 +1,4 @@
-import { useLocation, useRoutes } from 'react-router-dom';
+import { useRoutes } from 'react-router-dom';
 import Header from './components/Header';
 import ProductProvider from './contexts/productContext';
 import { router } from './router';

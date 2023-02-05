@@ -1,6 +1,5 @@
 import React from 'react';
 import { products } from '../mock/products';
-import { useProductContext } from '../contexts/productContext';
 import ProductCard from '../components/ProductCard';
 
 const Home = () => {
